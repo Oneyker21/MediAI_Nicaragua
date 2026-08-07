@@ -63,6 +63,9 @@ Implementamos un motor de clasificación basado en estándares, aplicando la sig
 
 El proyecto demuestra que existe lógica clínica detrás de las respuestas de la IA, priorizando la seguridad y salud del usuario.
 
+**Monitoreo Proactivo y SOS Inteligente (Integración con Smartwatch)**
+Conectando la app principal con relojes inteligentes (ej. Galaxy Watch mediante Wear OS), el sistema puede detectar anomalías en signos vitales (ritmo cardíaco anormal, caídas bruscas). Al detectar una emergencia real, el reloj notifica a la aplicación móvil en segundo plano, la cual utiliza servicios en la nube para **realizar llamadas automáticas** a contactos de emergencia mediante una voz de IA, enviando reportes de ubicación por SMS/WhatsApp, saltándose la necesidad de interacción manual en momentos críticos.
+
 ---
 
 ## 🏗️ Arquitectura tecnológica
@@ -71,5 +74,7 @@ El proyecto demuestra que existe lógica clínica detrás de las respuestas de l
 * **Backend:** Node.js, Express
 * **Base de datos:** Firebase Firestore
 * **Inteligencia Artificial:** OpenAI GPT o Llama 3
-* **Mapas:** `react-native-maps`
-* **Ubicación:** `expo-location`
+* **Mapas y Ubicación:** `react-native-maps` y `expo-location`
+* **Módulo Nativo Wearable:** Wear OS (Kotlin/Android Studio) para conexión con Galaxy Watch.
+* **Automatización de SOS (Llamadas/SMS):** API de Twilio u opción similar.
+* **Sensores Biométricos:** Android Health Services API / Wearable Data Layer API.
